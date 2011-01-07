@@ -21,6 +21,7 @@ class QRMaker:
 
     def createVCard(self, data):
         try:
+                logging.debug("In create vCard")
                 chart = QRChart(HEIGHT, WIDTH)
                 templateData = ''
                 for k, v in data.items():
@@ -33,6 +34,7 @@ class QRMaker:
                 chart.set_ec('H', 0)
                 uid = uuid.uuid1()
                 filePath =  '%s/../static/cache/%s.png' % (os.path.dirname(__file__), uid)
+                logging.debug("Creating image: " + filePath)
                 chart.download(filePath)
                 return uid
         except ex:
@@ -40,6 +42,8 @@ class QRMaker:
                 logging.exception('Unhandled exception')
 
     def generatePermalink(self, id):
+        logging.debug("From: " + '%s/../static/cache/%s.png' % (os.path.dirname(__file__), id))
+        logging.debug("To: " + '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id))
         shutil.copyfile(
             '%s/../static/cache/%s.png' % (os.path.dirname(__file__), id),
             '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)

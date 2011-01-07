@@ -16,7 +16,6 @@ from auth import rpxtokenurl
 from model import user
 
 initLogging()
-logging.debug("Path: " + os.path.dirname(__file__) + '/views/')  
 bottle.TEMPLATE_PATH.insert(0, os.path.dirname(__file__) + '/views/')
 
 @route('/favicon.ico')
