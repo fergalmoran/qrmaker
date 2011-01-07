@@ -1,5 +1,4 @@
 from pygooglechart import QRChart
-import logging
 import re
 import uuid
 import shutil
@@ -22,25 +21,18 @@ class QRMaker:
 
     def createVCard(self, data):
         try:
-                logging.debug('In createVCard')
                 chart = QRChart(HEIGHT, WIDTH)
                 templateData = ''
-                logging.debug('Parsing form')
                 for k, v in data.items():
                     templateData = self._templateData.replace('{%s}' % k, v)
                     self._templateData = templateData
 
-                logging.debug('Parsed form..')
-
                 match = re.sub(r'{\w*\w}', '', templateData)
 
                 chart.add_data(match)
-
                 chart.set_ec('H', 0)
                 uid = uuid.uuid1()
-                logging.debug('Downloading image')
                 filePath =  '%s/../static/cache/%s.png' % (os.path.dirname(__file__), uid)
-                logging.debug('Downloading ' + filePath)
                 chart.download(filePath)
                 return uid
         except ex:
@@ -49,8 +41,8 @@ class QRMaker:
 
     def generatePermalink(self, id):
         shutil.copyfile(
-            'static/cache/%s.png' % id,
-            'static/images/permalinked/%s.png' % id
+            '%s/../static/cache/%s.png' % (os.path.dirname(__file__), id),
+            '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)
         )
-        return 'static/images/permalinked/%s.png' % id
+        return '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)
 
