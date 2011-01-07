@@ -44,5 +44,5 @@ class QRMaker:
             '%s/../static/cache/%s.png' % (os.path.dirname(__file__), id),
             '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)
         )
-        return '%s/../static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)
+        return 'static/images/permalinked/%s.png' % (os.path.dirname(__file__), id)
 
