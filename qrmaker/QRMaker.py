@@ -3,7 +3,7 @@ import re
 import uuid
 import shutil
 import os
-
+import logging
 HEIGHT = 210
 WIDTH  = 210
 
