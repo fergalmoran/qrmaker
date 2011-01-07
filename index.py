@@ -27,6 +27,12 @@ def favicon():
 def server_static(directory, filename):
     return static_file(filename, root=os.path.dirname(__file__) + '/static/%s' % directory)
 
+@route('/permalinked/:filename')
+def server_static(filename):
+    rt = os.path.dirname(__file__) + '/static/images/permalinked' % directory
+    logging.debug("Permalink root: " + rt)
+    return static_file(filename, root=rt)
+
 @route('/css/:filename')
 def server_static(filename):
     return static_file(filename, root=os.path.dirname(__file__) + '/views/css')
