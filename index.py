@@ -80,8 +80,11 @@ def index():
 
 @route('/genqr', method='POST')
 def gen_qrvcard():
+    logging.debug("In genqr")
     qr = QRMaker.QRMaker()
+    logging.debug("Created QRMaker()")
     uid = qr.createVCard(request.forms)
+    logging.debug("Created vcard, returning to client")
     return template('qrcode', id=uid, linkurl='')
 
 application = bottle.default_app() 
