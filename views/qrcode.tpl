@@ -134,7 +134,7 @@
         </span>
         <div id="auth_widget">
             <!-- <a class="rpxnow" onclick="return false;" href="https://fm-qrcodes.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Fdev.fergalmoran.com%3A8080%2Fauth_proxy"> Permalink </a> -->
-            <a class="" href="/permalink/{{id}}"> Permalink </a>
+            <a class="" href="permalink/{{id}}"> Permalink </a>
         </div>
         <div id="permalink">
             {{!linkurl}}
