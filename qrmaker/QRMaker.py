@@ -7,13 +7,13 @@ import os
 HEIGHT = 210
 WIDTH  = 210
 
-vCardTemplate = '''BEGIN:VCARD
+vCardTemplate = """BEGIN:VCARD
 N:{SURNAME};{FIRSTNAME}
 TEL;CELL:{TELMOBILE}
 TEL;HOME:{TELHOME}
 EMAIL:{EMAIL}
 URL:{URL}
-END:VCARD'''
+END:VCARD"""
 
 class QRMaker:
     def __init__(self):
