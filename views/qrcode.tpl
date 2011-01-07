@@ -121,7 +121,7 @@
 <body>
     <div class="header">
         <h2>QR Code vCard Generator</h2>
-        <p>Author: <a href="http://fergalmoran.com/">Fergal Moran</a> <a href="http://blog.fergalmoran.com/qrcodegenerator/" class="cta">Blog article</a></p>
+        <p>Author: <a href="http://fergalmoran.com/">Fergal Moran</a> <a href="http://www.fergalmoran.com/2011/01/generating-qr-codes-containing-vcard-data/" class="cta">Blog article</a></p>
     </div>
       
     <div id="okMsg" style="padding-left: 100px">
