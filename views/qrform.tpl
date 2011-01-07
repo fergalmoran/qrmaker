@@ -122,7 +122,7 @@
     <div id="okMsg">
     </div>
     
-    <form action="/qrmaker" method="POST" enctype="multipart/form-data" class="uniForm">
+    <form action="genqr" method="POST" enctype="multipart/form-data" class="uniForm">
         <fieldset class="inlineLabels">
             <h3>vCard Details</h3>
             <div class="ctrlHolder">
