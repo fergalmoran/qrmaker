@@ -126,15 +126,15 @@
         <fieldset class="inlineLabels">
             <h3>vCard Details</h3>
             <div class="ctrlHolder">
-                <label for="">First name</label>
+                <label for="firstname">First name</label>
                 <input id="firstname" name="FIRSTNAME" value="" size="35" class="textInput" type="text">
             </div>
             <div class="ctrlHolder">
-                <label for="">Surname</label>
+                <label for="surname">Surname</label>
                 <input id="surname" name="SURNAME" value="" size="35" class="textInput" type="text">
             </div>
             <div class="ctrlHolder">
-                <label for="">Email address</label>
+                <label for="email">Email address</label>
                 <input id="email" name="EMAIL" value="" size="35" class="textInput" type="text">
             </div>
 <!--
@@ -144,19 +144,19 @@
             </div>
 -->
             <div class="ctrlHolder">
-                <label for="">Telephone (mobile):</label>
+                <label for="telmobile">Telephone (mobile):</label>
                 <input id="telmobile" name="TELMOBILE" value="" size="35" class="textInput" type="text">
             </div>
             <div class="ctrlHolder">
-                <label for="">Telephone (home):</label>
+                <label for="telhome">Telephone (home):</label>
                 <input id="telhome" name="TELHOME" value="" size="35" class="textInput" type="text">
             </div>
             <div class="ctrlHolder">
-                <label for="">Website Address:</label>
+                <label for="url">Website Address:</label>
                 <input id="url" name="URL" value="" size="35" class="textInput" type="text">
             </div>
             <div class="ctrlHolder">
-                <label for="">Address:</label>
+                <label for="addrhome">Address:</label>
                 <input id="addrhome" name="ADDRHOME" value="" size="35" class="textInput" type="text">
                 <p class="formHint">Please seperate lines with a comma</p>
             </div>
